@@ -1,0 +1,14 @@
+Author: William Grzybowski <william@grzy.org>
+Subject: Fix typo
+Last-Update: 2019-07-10
+--- pbzip2.orig/pbzip2.cpp	2019-07-09 20:38:26.980330100 -0300
++++ pbzip2/pbzip2.cpp	2019-07-09 20:38:38.144314701 -0300
+@@ -3599,7 +3599,7 @@
+ 					}
+ 					else if (ChildThreadStackSize < PTHREAD_STACK_MIN)
+ 					{
+-						fprintf(stderr,"pbzip2: *WARNING: Stack size %d bytes less than minumum - adjusting to %d bytes.\n",
++						fprintf(stderr,"pbzip2: *WARNING: Stack size %d bytes less than minimum - adjusting to %d bytes.\n",
+ 							 ChildThreadStackSize, PTHREAD_STACK_MIN);
+ 						ChildThreadStackSize = PTHREAD_STACK_MIN;
+ 					}
