@@ -1,0 +1,5 @@
+Test-Command: pbzip2 -h 2>&1 | grep Example:
+
+Test-Command: test "$(pbzip2 -c -d debian/tests/stuff/random10K.gz | sha1sum | cut -d" " -f1)" = "$(sha1sum debian/tests/stuff/random10K | cut -d" " -f1)"
+
+Test-Command: test "$(pbzip2 -c -z debian/tests/stuff/random10K | sha1sum | cut -d" " -f1)" = "$(sha1sum debian/tests/stuff/random10K.gz | cut -d" " -f1)"
